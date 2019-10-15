@@ -1542,8 +1542,7 @@ function ItemType.canHaveItemLevel(self)
 end
 
 function calculateItemLevel(monsterType)
-  local level = 1
   local monsterValue = monsterType:getMaxHealth() + monsterType:getExperience()
-  level = math.ceil(math.pow(monsterValue, 0.478))
+  local level = math.ceil(math.pow(monsterValue, 0.478))
   return math.max(1, level)
 end
